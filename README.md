@@ -12,7 +12,6 @@
 ## Table of Contents
 - [Why KAN?]
 - [How KAN Works (Detailed)]
-- [Convolutional-KAN: Marrying CNNs with KANs]
 
 ---
 
