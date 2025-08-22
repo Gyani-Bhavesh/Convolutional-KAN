@@ -5,7 +5,7 @@
 > **What’s inside?**  
 > This repo currently contains a single Jupyter notebook:
 > - `brain-cancer-ckan.ipynb` — an end-to-end, notebook-only workflow that builds a **Convolutional-KAN** (CNN features → KAN classifier) for a medical-imaging style task.  
-> (You can adapt the notebook to any image dataset by adjusting the data loader paths.) :contentReference[oaicite:0]{index=0}
+> (You can adapt the notebook to any image dataset by adjusting the data loader paths.)
 
 ---
 
