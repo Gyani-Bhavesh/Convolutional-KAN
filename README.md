@@ -26,7 +26,7 @@
 
 ## Why KAN?
 
-**Kolmogorov–Arnold Networks (KANs)** replace fixed node activations with **learnable 1-D functions on edges** (connections). Each edge carries a univariate function (typically a B-spline expansion) that’s trained end-to-end. In practice, KANs can reach strong accuracy with comparatively few parameters and offer **clear interpretability hooks** (visualize/prune per-edge functions; even derive symbolic formulas). :contentReference[oaicite:1]{index=1}
+**Kolmogorov–Arnold Networks (KANs)** replace fixed node activations with **learnable 1-D functions on edges** (connections). Each edge carries a univariate function (typically a B-spline expansion) that’s trained end-to-end. In practice, KANs can reach strong accuracy with comparatively few parameters and offer **clear interpretability hooks** (visualize/prune per-edge functions; even derive symbolic formulas).
 
 ---
 
@@ -55,7 +55,7 @@ where \(B_k\) are basis splines and \(c_{j,i,k}\) are learned coefficients. This
 - **Sparsity/Pruning:** Encourage edge sparsity (e.g., L1/entropy regularizers). Pruned KANs can be **reduced** to compact graphs and even **symbolic formulas** via basis fitting.  
 - **Interpretability:** You can **plot** per-edge functions, see which inputs matter, and extract **closed-form** expressions for parts of the network. :contentReference[oaicite:4]{index=4}
 
-> For a gentle hands-on tour (initialization, training, pruning, symbolic extraction), see the official **pykan docs** “Hello, KAN!” page. :contentReference[oaicite:5]{index=5}
+> For a gentle hands-on tour (initialization, training, pruning, symbolic extraction), see the official **pykan docs** “Hello, KAN!” page. 
 
 ---
 
@@ -65,7 +65,7 @@ In image tasks, a practical pattern is:
 1. **Convolutional backbone** (e.g., a small CNN or a torchvision model) to produce a feature vector \(\mathbf{z}\in\mathbb{R}^d\).
 2. **KAN head** that maps \(\mathbf{z}\to\) logits via one or more KAN layers (e.g., width \([d, h, C]\) for \(C\) classes).
 
-This “**Conv → KAN**” split keeps the spatial bias/efficiency of CNNs while leveraging KAN’s **edge-function interpretability** and compact parameterization on the classifier head. (For fully KAN-ified convs, see research repos exploring KAN-style conv operators.) :contentReference[oaicite:6]{index=6}
+This “**Conv → KAN**” split keeps the spatial bias/efficiency of CNNs while leveraging KAN’s **edge-function interpretability** and compact parameterization on the classifier head. (For fully KAN-ified convs, see research repos exploring KAN-style conv operators.)
 
 **Minimal PyTorch sketch (using `pykan`):**
 ```python
